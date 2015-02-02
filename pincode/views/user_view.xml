@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+<data>
+
+
+    <record id="user_pincode_form_view" model="ir.ui.view">
+        <field name="name">user.pincode</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+         <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Pincode">
+                        <group>
+                            <field name="pincode_id"/>
+                        </group>
+                        <group>
+                            <field name="pincode_log_id"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+    </record>
+
+</data>
+</openerp>
+

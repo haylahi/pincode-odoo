@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<openerp>
+<data>
+
+    <record id="config_pincode_form_view" model="ir.ui.view">
+        <field name="name">pincode.config</field>
+        <field name="model">pincode.config</field>
+        <field name="arch" type="xml">
+              <form string="Pincode">
+                       <group colspan="4">
+                             <group colspan="2" col="2">
+                                   <separator string="configuration" colspan="2"/>
+                                      <field name="name" placeholder="e.g. pincode "/>
+                                      <field name="type_id"/>
+                                      </group>
+
+                             <group colspan="2" col="2">
+                                      <field name="active"/>
+                             </group>
+                         </group>
+               </form>
+
+        </field>
+    </record>
+
+
+    <record id="config_pincode_tree_view" model="ir.ui.view">
+        <field name="name">pincode.config</field>
+        <field name="model">pincode.config</field>
+        <field name="arch" type="xml">
+            <tree string="Document">
+                <field name="name" />
+                <field name="sequence"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="log_pincode_form_view" model="ir.ui.view">
+        <field name="name">pincode.log</field>
+        <field name="model">pincode.log</field>
+        <field name="arch" type="xml">
+              <form string="Pincode">
+                       <group colspan="4">
+                             <group colspan="2" col="2">
+                                   <separator string="History log" colspan="2"/>
+                                      <field name="date" readonly="1"/>
+                                      <field name="pincode" readonly="1"/>
+                                      <field name="states" readonly="1"/>
+                                      <field name="ipuser" readonly="1"/>
+                                      <field name="user_id" readonly="1"/>
+                             </group>
+                       </group>
+               </form>
+
+        </field>
+    </record>
+
+    <record id="log_pincode_tree_view" model="ir.ui.view">
+        <field name="name">pincode.log</field>
+        <field name="model">pincode.log</field>
+        <field name="arch" type="xml">
+            <tree string="Document" colors="red:states=='wrong';green:states=='used';orange:states=='outdated'">
+                <field name="date"/>
+                <field name="pincode"/>
+                <field name="states"/>
+                <field name="ipuser"/>
+                <field name="user_id"/>
+            </tree>
+        </field>
+    </record>
+
+ 
+    <record id="type_pincode_form_view" model="ir.ui.view">
+        <field name="name">pincode.type</field>
+        <field name="model">pincode.type</field>
+        <field name="arch" type="xml">
+              <form string="Pincode">
+                       <group colspan="4">
+                             <group colspan="2" col="2">
+                                   <separator string="Type" colspan="2"/>
+                                      <field name="name"/>
+                                      <field name="length"  placeholder="e.g. 7"/>
+                                      <field name="format"/>
+                                      <field name="time_validity" widget="float_time" placeholder="e.g. 00:01"/>
+                                      <field name="action"/>
+                             </group>
+                        </group>
+               </form>
+        </field>
+    </record>
+
+
+</data>
+</openerp>

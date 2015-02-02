@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pincode_log_user,pincode.log,model_pincode_log,base.group_user,1,0,0,0
+access_pincode_config_user,pincode.config,model_pincode_config,base.group_user,1,0,0,0
+access_pincode_type_user,pincode.type,model_pincode_type,base.group_user,1,0,0,0
+access_pincode_log_manager,pincode.log,model_pincode_log,base.group_user,1,1,1,0
+access_pincode_config_manager,pincode.config,model_pincode_config,base.group_user,1,1,1,1
+access_pincode_type_manager,pincode.type,model_pincode_type,base.group_user,1,1,1,1
