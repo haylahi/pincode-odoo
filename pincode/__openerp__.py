@@ -22,15 +22,15 @@
     'name': 'Pincode',
     'version': '1.0',
     'depends': ['base','web','mail','email_template','base_action_rule' ],
-    'author': 'odoo-labs.',
+    'author': "O'labs.",
     'description': """
 
 pincode
-==============
+========
 
-...
-...
-...
+  Add a field 'PinCode' for connection in Odoo.
+
+  demo : https://www.youtube.com/watch?v=OxV7UIyOSyU
 
     """,
     'category': 'security',
